@@ -42,6 +42,10 @@ Founders and innovation teams frequently generate numerous distinct ideas withou
    - Rank the ideas based on their **Pattern-to-Anti-Pattern Ratio** (High Leverage vs. High Structural Risk).
    - Provide concrete reframing instructions to cure or pivot away from identified anti-patterns.
 
+6. **Apply Layman Skill Output Simplification**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -49,6 +53,7 @@ Founders and innovation teams frequently generate numerous distinct ideas withou
 - **Mandatory Idea List Input:** Do not execute synthesis without a list of ideas.
 - **Cross-Idea Focus:** Focus on relationships, commonalities, and recurring themes across ideas rather than treating each in isolation.
 - **Unsparing Anti-Pattern Identification:** Explicitly name and diagnose structural flaws without softening the analysis.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 

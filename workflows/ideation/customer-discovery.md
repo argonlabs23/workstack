@@ -49,6 +49,10 @@ Determine whether the user is providing **Draft Questions** (Mode A) OR **Interv
    - If one list is significantly longer or stronger than the other, perform an explicit **Asymmetry Audit**:
      > *Determine whether this asymmetry reflects true empirical consensus in the customer data—or indicates founder confirmation bias, selective note-taking, or leading interview questions.*
 
+5. **Apply Layman Skill Output Simplification:**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 20 words for procedural steps, <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -56,6 +60,7 @@ Determine whether the user is providing **Draft Questions** (Mode A) OR **Interv
 - **Strict Mom Test Enforcement:** Never permit hypothetical future-facing questions (*"Would you buy..."*). All queries must probe past behavior and actual past investments.
 - **Unsparing Bias Audit:** Explicitly call out founder confirmation bias when positive signals are over-emphasized relative to passive friction or polite customer disinterest.
 - **Evidence-Based Extraction:** Only count concrete past actions, current spending, or active workarounds as confirming evidence—not verbal compliments or promises.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 

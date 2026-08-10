@@ -47,6 +47,10 @@ Founders and product leaders often rely on lazy, top-down market sizing (e.g., *
 5. **Data Gap & Verification Roadmap**
    - Identify unverified quantitative estimates (e.g., exact account counts, ACV assumptions, churn risks) and provide a targeted verification checklist for the user.
 
+6. **Apply Layman Skill Output Simplification**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -55,6 +59,7 @@ Founders and product leaders often rely on lazy, top-down market sizing (e.g., *
 - **Direct Link to Hypothesis:** Customer complaints must be directly evaluated against the user's hypothesis, not listed as isolated bullet points.
 - **Differentiate Buyer vs. User:** Never assume the end user has budget authority without explicitly proving persona overlap.
 - **Objective & Disclaiming:** Disclaim unverified web data or market estimates and instruct the user on exact search parameters needed for empirical validation.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 

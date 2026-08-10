@@ -34,6 +34,10 @@ Founders and product teams frequently build in a vacuum, ignoring macro-environm
 5. **Fact Verification & Signal Tracking**
    - Highlight unverified macro assumptions and provide specific early-warning signals (e.g., specific bills in parliament, technological benchmarks, economic indices) for the user to monitor.
 
+6. **Apply Layman Skill Output Simplification**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -42,6 +46,7 @@ Founders and product teams frequently build in a vacuum, ignoring macro-environm
 - **Hypothesis Specificity:** Every trend analysis must directly address the user's specific product mechanics, not generic industry commentary.
 - **Mandatory 3 Pillars:** Must cover all three domains (Regulatory, Tech, Demographic/Behavioral).
 - **Actionable Strategic Outputs:** Every headwind must have a proposed mitigation, and every tailwind must have an acceleration strategy.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 

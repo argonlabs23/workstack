@@ -40,6 +40,10 @@ Founders and product leaders frequently dismiss competitors by focusing on weak,
    - Define the specific, non-obvious asymmetric advantage required for the user's solution to survive or win against these steel-titan threats.
    - Highlight key unverified market assumptions or competitive data gaps that require empirical validation.
 
+6. **Apply Layman Skill Output Simplification**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -48,6 +52,7 @@ Founders and product leaders frequently dismiss competitors by focusing on weak,
 - **Steelman Every Tier:** Provide deep, non-trivial threat analysis for all 4 tiers without omitting any category.
 - **Brutally Objective & Analytical:** Maintain an unsparing, first-principles tone aimed at saving founders from fatal strategic blind spots.
 - **Fact Verification & Uncertainty Disclaimers:** Explicitly list unverified assumptions regarding competitor product roadmaps, pricing power, or market dynamics.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 

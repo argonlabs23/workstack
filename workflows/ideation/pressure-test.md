@@ -40,6 +40,10 @@ Entrepreneurs and product builders frequently fall in love with their initial so
 6. **Fact Verification & Uncertainty Disclaimers**
    - Highlight any assumptions regarding market size, competitor behavior, regulatory barriers, or unit economics that lack empirical proof, instructing the user to verify these independently.
 
+7. **Apply Layman Skill Output Simplification**
+   - Before presenting the final output, apply the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to rewrite all generated text into clear, unambiguous English strictly following ASD-STE100 rules (sentences <= 25 words for descriptions, active voice, approved vocabulary).
+   - By default, output only the simplified text (standard mode) per the `layman` skill output specification unless the user requests `--verbose`.
+
 ---
 
 ## Constraints
@@ -48,6 +52,7 @@ Entrepreneurs and product builders frequently fall in love with their initial so
 - **Falsifiable Criteria Only:** Avoid subjective or soft metrics (e.g., "if users like it"). Falsification criteria must be concrete and measurable.
 - **No Pitching in Discovery:** Discovery questions must strictly adhere to past/present behaviors and current expenditures, never asking "Would you pay for..." or "Do you think X is a good idea?".
 - **Direct & Unsparing Tone:** Maintain a rigorous, objective, and analytical tone focused on saving the founder time and resources.
+- **ASD-STE100 Layman Output Mandate:** All generated output MUST be processed using the `layman` skill ([`SKILL.md`](../../skills/layman/SKILL.md)) to enforce Controlled Simplified Technical English rules before delivery.
 
 ---
 
