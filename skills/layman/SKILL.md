@@ -3,7 +3,7 @@ name: layman
 description: Simplify verbose, complex, or jargon-heavy text into clear, unambiguous, layperson-friendly English strictly following the ASD-STE100 (Simplified Technical English) specification rules and controlled vocabulary. Trigger this skill whenever asked to simplify text, convert jargon into layman's terms, rewrite complex documents simply, or apply ASD-STE100 standards.
 ---
 
-# Layman - ASD-STE100 Text Simplifier
+# Layman - simplify verbose, complex, or jargon-heavy text into clear, unambiguous, layperson-friendly English
 
 ## 1. Overview & Purpose
 
