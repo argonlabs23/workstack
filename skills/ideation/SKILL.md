@@ -36,7 +36,7 @@ Follow this deterministic workflow when executing `ideation add`:
 - If specified, target that file path.
 - If not specified, default to `ideas.md` in the workspace root or current directory.
 
-### Step 2: Parse and Infer Metadata Fields
+### Step 2: Parse and Infer Metadata Fields & Salient Takeaways
 Examine the user's raw input and extract or infer the following fields using the reference taxonomy in `./resources/idea_template.md`:
 
 1. **Title (`### [Brief, Punchy Title of Observation]`)**:
@@ -51,9 +51,15 @@ Examine the user's raw input and extract or infer the following fields using the
    - Infer who experiences the pain (e.g. `#OperationsManagers`, `#EngineeringManagers`, `#Freelancers`, `#SoloFounders`, `#AgencyOwners`, `#EnterpriseSales`).
 6. **Initial Rating (`- **Initial Rating (1-5):** ⭐⭐⭐`)**:
    - Evaluate friction severity on a 1–5 scale based on the taxonomy criteria (1=vitamin, 3=solid problem, 5=hair-on-fire) and render as star emojis (e.g., ⭐⭐⭐⭐).
-7. **The Breadcrumb (`- **The Breadcrumb (Observation):**`)**:
+7. **Core Friction (`- **Core Friction:**`)**:
+   - Sift out and summarize the core bottleneck/problem into a single, high-signal sentence (e.g. `Clients ignoring intake forms and emailing oversized/broken assets across 3 channels`).
+8. **Current Workaround (`- **Current Workaround:**`)**:
+   - Extract how the user or target audience currently copes with or hacks around the friction (e.g. `Manually searching Slack DMs and email threads to verify logo files`).
+9. **Proposed Concept (`- **Proposed Concept:**`)**:
+   - Synthesize the core solution, automation, or product concept implied or stated in the input (e.g. `Single-link client drop-zone with mandatory asset upload validation & automated Notion/Linear sync`).
+10. **The Breadcrumb (Raw Observation) (`- **The Breadcrumb (Raw Observation):**`)**:
    - **STRICT RULE**: If observation details/text were provided in the user input, format as a blockquote (`> *[User observation text]*`).
-   - **STRICT RULE**: If no observation/breadcrumb content was provided in the user's input, **LEAVE THIS FIELD EMPTY** (e.g., `- **The Breadcrumb (Observation):**` followed by an empty line or `> ` with no content). Do NOT infer or hallucinate breadcrumb observation text if none was provided.
+   - **STRICT RULE**: If no observation/breadcrumb content was provided in the user's input, **LEAVE THIS FIELD EMPTY** (e.g., `- **The Breadcrumb (Raw Observation):**` followed by an empty line or `> ` with no content). Do NOT infer or hallucinate breadcrumb observation text if none was provided.
 
 ### Step 3: Format Entry According to Reference Spec
 Format the output entry strictly matching the template in [idea_example.md](./resources/idea_example.md):
@@ -65,7 +71,10 @@ Format the output entry strictly matching the template in [idea_example.md](./re
 - **Pain Point:** `#Tag`
 - **Target Audience:** `#Tag`
 - **Initial Rating (1-5):** ⭐⭐⭐⭐
-- **The Breadcrumb (Observation):** 
+- **Core Friction:** [Concise summary of the key friction/bottleneck extracted from raw input]
+- **Current Workaround:** [How the user/target currently copes with or hacks around the problem]
+- **Proposed Concept:** [Synthesized solution, feature, or automation concept]
+- **The Breadcrumb (Raw Observation):** 
   > *[User observation text, or left empty if no input provided]*
 
 ---

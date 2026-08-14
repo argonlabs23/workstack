@@ -9,7 +9,10 @@
 - **Pain Point:** `#Tag`
 - **Target Audience:** `#Tag`
 - **Initial Rating (1-5):** ⭐⭐⭐
-- **The Breadcrumb (Observation):** 
+- **Core Friction:** [Concise summary of the key friction/bottleneck extracted from raw input]
+- **Current Workaround:** [How the user/target currently copes with or hacks around the problem]
+- **Proposed Concept:** [Synthesized solution, feature, or automation concept]
+- **The Breadcrumb (Raw Observation):** 
   > *Describe the exact friction, weird workaround, or complaint you witnessed.*
 
 ---
